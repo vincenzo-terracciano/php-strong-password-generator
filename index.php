@@ -2,6 +2,17 @@
 
 require_once './functions.php';
 
+if($password != "") {
+
+    session_start();
+
+    // salviamo la password in una variabile di sessione
+    $_SESSION["password"] = $password;
+
+    // indirizziamo l'utente alla pagina password.php
+    header("Location: ./password.php");
+}
+
 ?>
 
 
@@ -36,22 +47,7 @@ require_once './functions.php';
             <button type="submit" class="btn btn-primary">Generate</button>
         </form>
 
-        <hr>
-
-        <?php
         
-            if($password != "") {
-        
-        ?>
-        <h3>La tua password di <?php echo $_GET["length"] ?> caratteri:</h3>
-        <pre>
-            <?php echo $password ?>
-        </pre>
-        <?php 
-        
-            }
-        
-        ?>
     </div>
 
 </body>
