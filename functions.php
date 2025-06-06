@@ -5,13 +5,29 @@
     if(isset($_GET["length"])) {
 
         // possibili caratteri per la password
-        $uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        $lowercase = "abcdefghijklmnopqrstuvwxyz";
+        $letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         $numbers = "0123456789";
         $symbols = "!@#$%^&*()";
 
+        // controllo se inserire le lettere
+        $characters = "";
+
+        if(isset($_GET["letters"]) && $_GET["letters"] == "on") {
+            $characters .= $letters;
+        }
+
+        // controllo se inserire i numeri
+        if(isset($_GET["numbers"]) && $_GET["numbers"] == "on") {
+            $characters .= $numbers;
+        }
+
+        // controllo se inserire i simboli
+        if(isset($_GET["symbols"]) && $_GET["symbols"] == "on") {
+            $characters .= $symbols;
+        }
+
         // tutti i caratteri della password
-        $characters = $uppercase . $lowercase . $numbers . $symbols;
+        // $characters = $letters . $numbers . $symbols;
 
         // var_dump($characters);
 

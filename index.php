@@ -44,6 +44,36 @@ if($password != "") {
                 />
             </div>
 
+            <div class="form-check my-4">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="letters"
+                    name="letters"
+                />
+                <label class="form-check-label" for="letters"> Letters </label>
+            </div>
+
+            <div class="form-check my-4">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="numbers"
+                    name="numbers"
+                />
+                <label class="form-check-label" for="numbers"> Numbers </label>
+            </div>
+
+            <div class="form-check my-4">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="symbols"
+                    name="symbols"
+                />
+                <label class="form-check-label" for="symbols"> Symbols </label>
+            </div>
+
             <button type="submit" class="btn btn-primary">Generate</button>
         </form>
 
